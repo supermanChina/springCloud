@@ -1,6 +1,6 @@
 package com.siemens.plm.maa.serviceconsumer.controller;
 
-import com.siemens.plm.maa.serviceconsumer.domain.UserForProvider;
+import com.siemens.plm.maa.serviceconsumer.domain.UserForProvider2;
 import com.siemens.plm.maa.serviceconsumer.provider.ServiceProviderApi;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class ServiceConsumerController {
-    private static final Logger logger = LoggerFactory.getLogger(ServiceConsumerController.class);
+public class ServiceConsumer2Controller {
+    private static final Logger logger = LoggerFactory.getLogger(ServiceConsumer2Controller.class);
     @Autowired
     private ServiceProviderApi serviceProviderApi;
     @GetMapping("/userHello")
@@ -21,8 +21,8 @@ public class ServiceConsumerController {
     }
 
     @PostMapping("/consume/userAdd")
-    public UserForProvider createUser(@RequestBody UserForProvider user){
-        UserForProvider newUser = serviceProviderApi.addNewUser(user);
+    public UserForProvider2 createUser(@RequestBody UserForProvider2 user){
+        UserForProvider2 newUser = serviceProviderApi.addNewUser(user);
         logger.info("New user added: {}", newUser);
         return newUser;
     }
