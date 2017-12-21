@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ServiceProviderController {
     private static final Logger logger = LoggerFactory.getLogger(ServiceProviderController.class);
 
-    @GetMapping("/hello")
+    @GetMapping("/users/hello")
     public String helloStringService() {
         logger.info("Receive hello request");
         return "Hello from micro service provider";

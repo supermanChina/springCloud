@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @FeignClient("service-provider")
-public interface ServiceProviderApi {
+public interface ServiceProviderApi2 {
     @GetMapping("/hello")
     String helloUser();
 

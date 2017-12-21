@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @FeignClient("service-provider")
 public interface ServiceProviderApi {
-    @GetMapping("/hello")
+    @GetMapping("/users/hello")
     String helloUser();
 
     @PostMapping("/users/")

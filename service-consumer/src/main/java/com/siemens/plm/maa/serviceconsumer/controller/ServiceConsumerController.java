@@ -15,8 +15,9 @@ public class ServiceConsumerController {
     private static final Logger logger = LoggerFactory.getLogger(ServiceConsumerController.class);
     @Autowired
     private ServiceProviderApi serviceProviderApi;
-    @GetMapping("/userHello")
+    @GetMapping("/consume/userHello")
     public String consumeHelloUser() {
+        logger.info("Consume hello from provider.");
         return "Consume service by service provided API interface: <br> " + serviceProviderApi.helloUser();
     }
 
